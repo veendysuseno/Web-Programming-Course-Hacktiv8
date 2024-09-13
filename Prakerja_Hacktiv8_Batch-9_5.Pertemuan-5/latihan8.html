@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Program Menentukan Grade Nilai Mahasiswa</title>
+  </head>
+  <body>
+    <label for="nilai">Nilai: </label>
+    <input type="number" id="nilai" /> <br /><br />
+
+    <button id="btn-hitung" onclick="hitungGrade();">Grade</button><br /><br />
+
+    <div id="hasil"></div>
+
+    <script>
+      function hitungGrade() {
+        let nilai = document.getElementById("nilai").value;
+        let grade = nul;
+        if (nilai >= 85 && nilai <= 100) {
+          grade = "A";
+        } else if (nilai >= 75 && nilai < 85) {
+          grade = "B";
+        } else if (nilai >= 65 && nilai < 75) {
+          grade = "C";
+        } else if (nilai >= 55 && nilai < 65) {
+          grade = "D";
+        } else {
+          grade = "E";
+        }
+        document.getElementById("hasil").innerHTML = Grade;
+      }
+
+/*Ternary Operator
+
+let namavariabel = (Kondisi) ? nilai_ketika_true:
+nilai_ketika_false;
+
+let namavariabel = (Kondisi1) ? nilai_ketika_true_kondisi-1:
+(kondisi-2) ? nilai_ketika_true_kondisi-2 : nilai_ketika_false;
+
+Contoh Lain:
+let arti_lampu = (lampu == "merah") : "berhenti" ? (lampu == "kuning") ?  nilai_ketika_true:
+nilai_ketika_false;
+
+
+
+*/
+
+
+      
+    </script>
+  </body>
+</html>

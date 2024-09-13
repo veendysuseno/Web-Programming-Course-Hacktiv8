@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 1 | Pertemuan 2</title>
+</head>
+<body>
+    <!-- 
+        komentar: bagian yang tidak dieksekusi / diterjemahkan oleh compiler / interpreter
+
+        tag ==> <>
+
+        syntax: 
+            1. berpasangan / paired tag: <namatag>konten</namatag>
+            2. sendirian / single tag / void  : <namatag />
+
+            <namatag atribut="value"></namatag> 
+            <namatag atribut="value" atribut2="value2"></namatag> 
+            <namatag atribut="value" /> 
+    -->
+
+    <!-- navigasi -->
+    <a href="latihan2.html">Ke Latihan 2</a> |
+    <a href="latihan3.html">Ke Latihan 3</a> |
+    <a href="latihan4.html">Ke Latihan 4</a> |
+
+    <br/><br/>
+    
+    <!-- membuat tulisan cetak tebal -->
+    <b>Ini tulisan tebal</b> <br/>
+    <strong>Ini tulisan tebal juga</strong> <br/>
+
+    <!-- membuat tulisan cetak miring -->
+    <i>Ini tulisan cetak miring</i> <br/>
+    <em>Ini tulisan cetak miring juga</em> <br/>
+
+    <!-- membuat tulisan garis bawah -->
+    <u>Ini tulisan garis bawah</u> <br/>
+
+    <!-- membuat tulisan cetak tebal dan garis bawah -->
+    <b><u>Ini tulisan tebal dan garis bawah</u></b> <br/>
+
+    <b><u><i>Ini tulisan tebal, garis bawah, dan cetak miring</i></u></b>
+    
+    <!-- membuat garis horizontal / mendatar -->
+    <hr/>
+
+    Rumus Kimia Asam Sulfat: H<sub>2</sub>SO<sub>4</sub> <br/>
+
+    Persamaan akar kuadrat: 3x<sup>3</sup> + 8x<sup>2</sup> + 10x - 12 = 0
+
+    <marquee>Pengumuman: Ini tulisan berjalan terus-menerus.</marquee>
+
+    <hr/>
+
+    <h1>Memuat Gambar</h1>
+
+    <!-- memuat gambar dari lokasi yang sama dengan html -->
+    <img src="sample-img.png" alt="Gambar Profil" width="20%" /> <br/>
+
+    <!-- 
+        memuat gambar dari dalam folder
+        syntax: ... src="namafolder/namafolder2/namafile.png" ...
+    -->
+    <img src="assets/sample-img-2.png" alt="Gambar Profil 2" width="35%" /> <br/>
+
+    <h1>Memuat Audio</h1>
+
+    <audio controls="controls">
+        <source src="sample-audio.mp3" type="audio/mp3" />
+    </audio>
+
+    <h1>Memuat Video</h1>    
+    <video controls="controls">
+        <source src="sample-video.mp4" type="video/mp4" />
+    </video>
+
+    <h1>Memuat Video Youtube via Iframe</h1>
+
+    <iframe width="427" height="240" src="https://www.youtube.com/embed/mSCzN1Xwksc" frameborder="0" allowfullscreen></iframe>
+
+</body>
+</html>

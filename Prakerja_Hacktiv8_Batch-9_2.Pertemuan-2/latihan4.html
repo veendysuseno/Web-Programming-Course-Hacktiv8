@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- internal css -->
+    <style>
+        /* 
+            selector {
+                properti: value;
+                properti: value;
+            }
+
+            selector ==> namatag tanpa <> atau id atau class
+        */
+        
+        .merah {
+            color: red;
+        }
+
+    </style>
+
+</head>
+<body>
+    <!-- 
+        div ==> bagian 
+            - id = # = bersifat unik ==> hanya boleh 1 kali digunakan di 1 file html yang sama
+            - class = . = boleh berulang ==> bisa digunakan berkali-kali di 1 file html yang sama
+    
+    -->
+
+    <div id="header">
+        Ini Header
+    </div>
+
+    <div id="content">
+        Ini Content
+    </div>
+
+    <div id="sidebar">
+        Ini Sidebar
+    </div>
+
+    <div id="footer">
+        Ini Footer
+    </div>
+
+    <hr/>
+
+    <h3>Contoh yang salah untuk id: </h3>
+    <div id="menu_satu">
+        <ul id="menu_satu">
+            <li>Beranda</li>
+            <li>Tutorial</li>
+        </ul>
+    </div>
+
+    <DIV>
+        <a href="#">test</a>
+    </DIV>
+    
+    <h3>Contoh yang benar untuk id: </h3>
+    <div id="menu-wrapper">
+        <ul id="menu">
+            <li>Beranda</li>
+            <li>Tutorial</li>
+        </ul>
+    </div>
+
+    <h3>Contoh dengan class: </h3>
+    <ul id="menu">
+        <li class="merah">Beranda</li>
+        <li>Tutorial</li>
+        <li class="merah">Berita</li>
+        <li>Video</li>
+    </ul>
+
+    <hr/>
+
+    <div id="wrapper">
+        <div id="content">
+            <div id="article"></div>
+            <div id="sidebar"></div>
+        </div>
+    </div>
+
+</body>
+</html>

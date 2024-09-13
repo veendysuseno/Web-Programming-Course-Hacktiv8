@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Lampu Lalu Lintas</title>
+</head>
+<body>
+    <h1>Program Lampu Lalu Lintas</h1>
+
+    <label for="Lampu">Lampu: </label>
+    <select id="lampu">
+    <!-- <select class="lampu"> -->
+        <option value="">- Pilih Warna Lampu -</option>
+        <option value="merah">Merah</option>
+        <option value="kuning">Kuning</option>
+        <option value="hijau">Hijau</option>
+    </select> <br/><br/>
+
+    <button onclick="tampilkanAksi();">Maksudnya? </button> <br/><br/>
+
+    <h3>Hasil: <span id="hasil"></span></h3>
+
+    <script>
+        function tampilkanAksi () {
+            let lampu = document.getElementById('lampu').value;
+
+
+            // let lampu = document.getElementsByClassName('lampu')[0].value;
+            let arti = "";
+
+            // console.log(lampu);
+
+            // conditional
+            if (lampu == "merah") {
+                arti = "Berhenti";
+            }
+            else if (lampu == "kuning") {
+                arti = "Hati - hati / Gaskeun?";
+            }
+            else if (lampu == "hijau") {
+                arti = "Jalan";
+            }
+
+            document.getElementById('hasil').innerHTML = arti;
+        }
+    </script>
+
+
+</body>
+</html>

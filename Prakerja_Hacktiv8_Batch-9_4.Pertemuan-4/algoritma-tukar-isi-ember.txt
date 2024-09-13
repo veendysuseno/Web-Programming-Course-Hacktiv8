@@ -1,0 +1,31 @@
+2 ember: A dan B
+A = merah 
+B = biru
+Tukarkan sehingga A = biru dan B = merah 
+
+Algoritma Tukar Isi Ember (Naratif):
+1. Tuangkan larutan dari bejana A ke C 
+2. Tuangkan larutan dari bejana B ke A 
+3. Tuangkan larutan dari bejana C ke B 
+
+
+----------------------------------
+Possible solution: 
+3 ember: A, B, dan C
+
+Algoritma Tukar Isi Ember (Pseudo-Code):
+// deklarasi & kamus data (input)
+A <-- "merah"
+B <-- "biru"
+C <-- ""
+
+// implementasi (proses)
+C <-- A // A dituangkan ke C (A=""; B="biru"; C="merah")
+A <-- B // B dituangkan ke A (A="biru"; B=""; C="merah")
+B <-- C // C dituangkan ke B (A="biru"; B="merah"; C="")
+C <-- ""
+
+// output 
+print "A = " + A 
+print "B = " + B 
+print "C = " + C 

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 3 - Tipe Data</title>
+</head>
+<body>
+    
+    <div id="angka1"></div>
+    <div id="kalimat"></div>
+    <div id="mahasiswa"></div>
+    <div id="nilai"></div>
+
+    <script>
+        /*
+            komentar di javascript: 
+                1. //     => untuk 1 baris 
+                2.    => untuk lebih dari 1 baris
+
+            tipe data: jenis data yang bisa ditampung oleh variabel
+
+            jenis tipe data:
+            1. number ==> a. integer        ==> bilangan bulat
+                          b. floating point ==> bilangan desimal
+            2. string ==> karakter / teks ==> menggunakan simbol ".." atau '..'
+            3. boolean ==> nilainya hanya ada 2: a. true; b. false;
+            4. array ==> menampung banyak data sekaligus dengan tipe data yang sama 
+            5. object ==> perwujudan dari class / instansiasi class
+        */
+        // deklarasi angka sebagai number   
+        var angka1 = 80.5;
+        // deklarasi angka sebagai string ==> menggunakan tanda petik / kutip
+        var angkaString = "80.5";
+        document.getElementById('angka1').innerHTML = angka1;
+        // menampilkan tipe data dari variabel
+        // format: typeof namavariabel;
+        console.log(typeof angka1);
+        
+        let kalimat = "Belajar JS di Workshop WFDB";
+        document.getElementById('kalimat').innerHTML = kalimat;
+        console.log(typeof kalimat);
+
+        // dari pada menggunakan ini
+        // let nilai1 = 55;
+        // let nilai2 = 60;
+        // let nilai3 = 87,
+        //     nilai4 = 94,
+        //     nilai5 = 72;
+
+        // lebih baik menggunakan array / larik
+
+        /*
+            deklarasi variabel bertipe array 
+            let namavariabel = Array(.., .., ..);
+            atau 
+            let namavariabel = [.., .., ..];
+        */
+        let nilai = Array(55, 60, 87, 94, 72);
+            // indeks:    0    1   2   3   4  
+            console.log(nilai);
+            
+            // better pakai [.., ..]
+            let mahasiswa = ['Andi', 'Dani', 'Cindy', 'Rizki', 'Febri'];
+            // indeks:          0      1        2        3       4  
+
+            // cara mengakses nilai
+            // menampilkan nama Cindy: ==> indeks ke-2 ==> mahasiswa[2], dst..
+            
+        console.log(mahasiswa);
+
+        document.getElementById('mahasiswa').innerHTML = mahasiswa[1];
+        console.log(typeof mahasiswa);
+        document.getElementById('nilai').innerHTML = nilai[1];
+        console.log(typeof nilai);
+
+        /*
+            deklarasi variabel bertipe object
+
+            let namavariabel = {
+                property: value,
+                ...,
+                propertyN: valueN
+            };
+        */
+
+        let player1 = {
+            name: 'Pratama Arhan',
+            club: 'Tokyo Verdy',
+            history: [
+                'Klub 1',
+                'Klub 2',
+                'Klub 3'
+            ],
+            value: 6000000000,
+            isActive: true
+        };
+
+        let monster = {
+            name: 'Elemental HERO Stratos',
+            attack: 1800,
+            defense: 1200,
+            attribute: 'wind'
+        };
+
+        console.log(player1);
+        console.log(typeof player1);
+
+        // mengakses nilai dari object:
+        /*
+            format: namavariabel.namaproperty
+        */
+       // menampilkan nama dan club player 
+       console.log('Nama: ' + player1.name);
+       console.log('Klub: ' + player1.club);
+
+    </script>
+</body>
+</html>

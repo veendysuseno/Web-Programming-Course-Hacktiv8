@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 6 - Event</title>
+</head>
+<body>
+
+    <select id="warna" onchange="gantiWarnaBackground(this);">
+        <option value="" disabled selected>- Pilih Warna Latar Belakang -</option>
+        <option value="red">Merah</option>
+        <option value="blue">Biru</option>
+        <option value="orange">Oren</option>
+        <option value="brown">Cokelat</option>
+    </select>
+    
+    <a href="link1.com" onmouseover="visitLink('https://facebook.com');">Link 1</a>
+
+    <script>
+        function visitLink (link) {
+            window.open(link);
+        }
+
+        function gantiWarnaBackground (element) {
+            console.log(element.value);
+
+            document.body.style.backgroundColor = element.value;
+
+        }
+
+    </script>
+
+</body>
+</html>

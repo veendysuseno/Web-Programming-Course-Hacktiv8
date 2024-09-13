@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tampilan Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="asset/css/styleVALUEJS.css" />
+  </head>
+
+  <body>
+    <h1>Form Pengisian Data</h1>
+    <form id="form-data">
+      <label for="nama">Nama :</label>
+      <input type="text" id="nama" name="nama" /><br />
+
+      <label for="email">Email :</label>
+      <input type="email" id="email" name="email" /><br />
+
+      <label for="usia">Usia :</label>
+      <input type="number" id="usia" name="usia" /><br />
+
+      <label for="alamat">Alamat :</label>
+      <textarea id="alamat" name="alamat"></textarea><br />
+
+      <button type="button" onclick="simpanData()">Simpan</button>
+    </form>
+
+    <h1>Data Pengisian Sebelumnya</h1>
+    <div id="data-sebelumnya">
+      <p>Nama: <span id="nama-sebelumnya"></span></p>
+      <p>Email: <span id="email-sebelumnya"></span></p>
+      <p>Usia: <span id="usia-sebelumnya"></span></p>
+      <p>Alamat: <span id="alamat-sebelumnya"></span></p>
+    </div>
+
+    <script>
+      // Fungsi untuk menyimpan data pengisian form
+      function simpanData() {
+        var nama = document.getElementById("nama").value;
+        var email = document.getElementById("email").value;
+        var usia = document.getElementById("usia").value;
+        var alamat = document.getElementById("alamat").value;
+
+        // Simpan data ke local storage
+        localStorage.setItem("nama", nama);
+        localStorage.setItem("email", email);
+        localStorage.setItem("usia", usia);
+        localStorage.setItem("alamat", alamat);
+        // Tampilkan data pengisian sebelumnya
+        tampilkanDataSebelumnya();
+      }
+
+      // Fungsi untuk menampilkan data pengisian sebelumnya
+      function tampilkanDataSebelumnya() {
+        var namaSebelumnya = localStorage.getItem("nama");
+        var emailSebelumnya = localStorage.getItem("email");
+        var usiaSebelumnya = localStorage.getItem("usia");
+        var alamatSebelumnya = localStorage.getItem("alamat");
+        document.getElementById("nama-sebelumnya").innerText = namaSebelumnya;
+        document.getElementById("email-sebelumnya").innerText = emailSebelumnya;
+        document.getElementById("usia-sebelumnya").innerText = usiaSebelumnya;
+        document.getElementById("alamat-sebelumnya").innerText =
+          alamatSebelumnya;
+      }
+      // Panggil fungsi untuk menampilkan data pengisian sebelumnya saat halaman dimuat
+      tampilkanDataSebelumnya();
+    </script>
+  </body>
+</html>

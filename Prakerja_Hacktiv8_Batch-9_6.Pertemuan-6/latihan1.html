@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latihan 1</title>
+  </head>
+  <body>
+    <script>
+    let judul = document.createElement('h1');
+
+    judul.textContent = "Belajar Javascript";
+
+    document.body.append(judul);
+    
+    let kotak1 = document.createElement('div');
+
+      kotak1.id = "kotak1";
+
+      kotak1.textContent = "Halo dari kotak 1";
+
+      kotak1.style.background = "red";
+
+      document.body.append(kotak1);
+
+      // hapus elemen 
+
+      kotak1.remove();
+
+
+    </script>
+  </body>
+</html>

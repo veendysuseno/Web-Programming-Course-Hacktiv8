@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Saklar Lampu</title>
+
+    <style>
+        #lampu {
+            width: 40%;
+        }
+    </style>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+</head>
+<body>
+    <h2>Program Lampu</h2>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">Program Lampu</div>
+                    <div class="card-body">
+                        <img src="assets/lampu-mati.png" alt="Gambar Lampu Mati" id="lampu" class="lampu-mati" /> <br/><br/>
+    
+                        <button id="saklar" onclick="toggleLampu();" class="btn btn-primary">Hidupkan Lampu</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card" id="kotak2">
+                    <div class="card-header">Program Ubah Warna</div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="warna-background">Warna Background: </label>
+                            <input type="color" class="w-20" id="warna-background" onchange="ubahWarnaBackground(this);" />
+                        </div>
+                        <div class="form-group">
+                            <label for="warna-tulisan">Warna Tulisan: </label>
+                            <input type="color" class="w-20" id="warna-tulisan" onchange="ubahWarnaTulisan(this);" />
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <button id="saklar2" onclick="hidupkanLampu();">Hidupkan Lampu</button>
+    <button id="saklar3" onclick="matikanLampu();">Matikan Lampu</button> -->
+    
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+    <script>
+        /*
+            Buat program lampu dengan menekan 1 tombol bisa menyalakan dan mematikan lampu tersebut!
+
+            cara:
+
+            manipulasi / ubah atribut src dari img id="lampu"
+
+            ketika lampu mati: 
+                - tulisan tombol = "Hidupkan Lampu"
+                - tombol diklik, ganti src lampu menjadi lampu hidup 
+                - ubah tulisan tombol menjadi "Matikan Lampu"
+
+            ketika lampu hidup: 
+                - tulisan tombol = "Matikan Lampu"
+                - tombol diklik, ganti src lampu menjadi lampu mati 
+                - ubah tulisan tombol menjadi "Hidupkan Lampu"
+
+        */
+        let lampu = document.getElementById('lampu');
+        let saklar = document.getElementById('saklar');
+
+        function hidupkanLampu () {
+            lampu.src = "assets/lampu-nyala.png";
+        }
+
+        function matikanLampu () {
+            lampu.src = "assets/lampu-mati.png";
+        }
+
+        function toggleLampu () {
+            let statusLampu = lampu.className;
+            if (statusLampu === 'lampu-mati') {
+                // ganti src lampu ke lampu-nyala.png
+                lampu.src = 'assets/lampu-nyala.png';
+
+                // menghapus class lampu-mati
+                lampu.classList.remove('lampu-mati');
+
+                // menambahkan class lampu-nyala
+                lampu.classList.add('lampu-nyala');
+
+                saklar.innerHTML = "Matikan Lampu";
+
+                // menghapus class btn-primary dan menambahkan class btn-danger ke button id=saklar
+                $('#saklar').removeClass('btn-primary').addClass('btn-danger');
+                
+            } else {
+                lampu.src = 'assets/lampu-mati.png';
+
+                // menghapus class lampu-nyala
+                lampu.classList.remove('lampu-nyala');
+
+                // menambahkan class lampu-mati
+                lampu.classList.add('lampu-mati');
+
+                $('#saklar')
+                    .html('Hidupkan Lampu')
+                    .removeClass('btn-danger')
+                    .addClass('btn-primary');
+            }
+        }
+
+        function ubahWarnaBackground (element) {
+            console.log(element.value);
+
+            let warna = element.value;
+
+            document.body.style.backgroundColor = warna;
+
+            let kotak2 = document.querySelector('#kotak2 .card-body');
+            kotak2.style.backgroundColor = warna;
+        }
+
+        function ubahWarnaTulisan (element) {
+            console.log(element.value);
+
+            let warna = element.value;
+
+            document.body.style.color = warna;
+
+            let kotak2 = document.querySelector('#kotak2 .card-body');
+            kotak2.style.color = warna;
+        }
+
+
+
+    </script>
+
+</body>
+</html>

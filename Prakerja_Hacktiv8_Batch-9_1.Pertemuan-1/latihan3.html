@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Memuat Gambar</h1>
+
+    <!-- memuat gambar dari lokasi yang sama dengan html -->
+    <img src="sample-img.png" alt="Gambar Profil" width="20%" /> <br />
+
+    <!-- 
+        memuat gambar dari dalam folder
+        syntax: ... src="namafolder/namafolder2/namafile.png" ...
+    -->
+    <img src="assets/sample-img-2.png" alt="Gambar Profil 2" width="35%" />
+    <br />
+
+    <h1>Memuat Audio</h1>
+
+    <audio controls="controls">
+      <source src="sample-audio.mp3" type="audio/mp3" />
+    </audio>
+
+    <h1>Memuat Video</h1>
+    <video controls="controls">
+      <source src="sample-video.mp4" type="video/mp4" />
+    </video>
+
+    <h1>Memuat Video Youtube via Iframe</h1>
+
+    <iframe
+      width="427"
+      height="240"
+      src="https://www.youtube.com/embed/mSCzN1Xwksc"
+      frameborder="0"
+      allowfullscreen
+    ></iframe>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 1 - Pertemuan 5</title>
+
+    <script>
+        // menuliskan ke dalam console web browser
+        console.log('Hello console...');
+    </script>
+
+</head>
+<body>
+
+    <div id="salam-from-html">
+        <p>Halo..</p>
+    </div>
+
+    <div id="salam-from-js">
+
+    </div>
+
+
+    
+    <!-- menggunakan javascript -->
+    <!-- internal javascript 
+            => bisa di dalam tag head atau body
+    -->
+    <script>
+        // menuliskan ke dalam dokumen html / body
+        document.getElementById('salam-from-js').innerHTML = 'Halo dari Javascript..';
+        
+        // setelah 2000 milidetik / 2 detik, eksekusi kode di dalamnya        
+        setTimeout(() => {
+            // menimpa isi di salam-from-html        
+            document.getElementById('salam-from-html').innerHTML = 'Bagian ini di-update dari Javascript..';
+            
+        }, 2000);
+
+        document.writeln("Halo from Javascript lagi.<br/>.");
+        document.write("<p style='color: red; background: yellow;''>Halo from Javascript lagi (2)..</p>");
+
+    </script>
+
+    <!-- menggunakan external javascript -->
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="latihan.js"></script>
+
+
+</body>
+</html>

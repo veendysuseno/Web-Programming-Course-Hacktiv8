@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latihan 5 - Pertemuan 2</title>
+  </head>
+  <body>
+    <h1>Formulir Pendaftaran Prakerja 2023</h1>
+
+    <form method="POST">
+      <label for="nama-depan">Nama Saya: </label>
+      <input type="text" id="nama-depan" name="nama-depan" />
+      <input type="text" name="nama-belakang" /> <br />
+
+      <label for="jenis-kelamin">Jenis Kelamin: </label>
+      <input type="radio" name="jenis-kelamin" value="L" /> Laki-laki
+      <input type="radio" name="jenis-kelamin" value="P" /> Perempuan <br />
+
+      <label for="tanggal-lahir">Tanggal Lahir: </label>
+      <input type="date" name="tanggal-lahir" /> <br />
+
+      <label for="kewarganegaraan">Saya tinggal di: </label>
+      <select name="kewarganegaraan">
+        <option value="" disabled selected>-Pilih Kewarganegaraan-</option>
+        <option value="Indonesia">Indonesia</option>
+        <option value="Malaysia">Malaysia</option>
+        <option value="Australia">Australia</option>
+        <option value="Singapura">Singapura</option>
+        <option value="Vietnam">Vietnam</option>
+      </select>
+      <br />
+
+      <label for="makanan-favorit">Makanan Favorit: </label>
+      <input type="checkbox" name="makanan-favorit" value="Bakso" /> Bakso
+      <input type="checkbox" name="makanan-favorit" value="Gudeg" /> Gudeg
+      <input type="checkbox" name="makanan-favorit" value="Soto" /> Soto
+      <input type="checkbox" name="makanan-favorit" value="Nasi Goreng" /> Nasi
+      Goreng <br />
+
+      <label for="harga-barang">Harga Barang: </label>
+      <input type="number" name="Harga Barang" />
+
+      <label for="warna">Warna Favorit: </label>
+      <input type="color" name="warna" />
+
+      <label for="tingkat-penguasaan-html">TIngkat Penguasaan HTML: </label>
+      <input type="range" min="0" max="10" step="0.1" /> <br/>
+
+      <label for="email">E-Mail: </label>
+      <input type="email" name="email" /> <br/>
+
+      <label for="alamat" style="vertical-align: top;">Alamat: </label>
+      <textarea name="alamat" cols="30" rows="10"></textarea> <br/><br/>
+
+      <input type="submit" value="Kirim" />
+
+      <input type="reset" value="Reset">
+
+    </form>
+  </body>
+</html>

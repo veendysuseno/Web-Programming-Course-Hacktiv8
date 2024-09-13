@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 3 - Pertemuan 2</title>
+</head>
+<body>
+    <!-- ke file html lain -->
+    <a href="latihan1.html">Ke Latihan 1</a> | 
+    <a href="latihan2.html">Ke Latihan 2</a> | 
+    <a href="latihan3.html">Ke Latihan 3</a> | 
+    
+    <h1>Membuat Daftar / List</h1>
+
+    <!-- 
+        List 
+        1. List berurutan ==> numbering ==> ordered ==> <ol>
+        2. List tidak berurutan ==> simbol / bullets ==> unordered ==> <ul>
+
+        Format Ordered List:
+        <ol>
+            <li>list 1</li>
+            <li>list 2</li>
+        </ol>
+
+        Format Unordered List:
+        <ul>
+            <li>list 1</li>
+            <li>list 2</li>
+        </ul>
+    -->
+
+    <h1>Ordered List</h1>
+    <h2>Yang harus dilakukan hari ini:</h2>
+    <ol type="1"> 
+        <li>Diam di rumah</li>
+        <li>Buat tutorial HTML</li>
+        <li>Mengerjakan PR Sekolah</li>
+    </ol>
+    <!-- memulai bukan dari 1 -->
+    <ol start="25"> 
+        <li>Diam di rumah</li>
+        <li>Buat tutorial HTML</li>
+        <li>Mengerjakan PR Sekolah</li>
+    </ol>
+    <ol type="a"> 
+        <li>Diam di rumah</li>
+        <li>Buat tutorial HTML</li>
+        <li>Mengerjakan PR Sekolah</li>
+    </ol>
+    <ol type="A"> 
+        <li>Diam di rumah</li>
+        <li>Buat tutorial HTML</li>
+        <li>Mengerjakan PR Sekolah</li>
+    </ol>
+    <ol type="i"> 
+        <li>Diam di rumah</li>
+        <li>Buat tutorial HTML</li>
+        <li>Mengerjakan PR Sekolah</li>
+    </ol>
+    <ol type="I"> 
+        <li>Diam di rumah</li>
+        <li>Buat tutorial HTML</li>
+        <li>Mengerjakan PR Sekolah</li>
+    </ol>
+
+    <hr/>
+
+    <h1>Unordered List</h1>
+    <h2>Yang harus dilakukan hari ini:</h2>
+    <ul> 
+        <li>Diam di rumah</li>
+        <li>Buat tutorial HTML</li>
+        <li>Mengerjakan PR Sekolah</li>
+    </ul>
+    
+    <!-- inline css -->
+    <!-- style = "properti1: value1; properti2: value2;" -->
+
+    <ul style="list-style-type: circle;"> 
+        <li>Diam di rumah</li>
+        <li>Buat tutorial HTML</li>
+        <li>Mengerjakan PR Sekolah</li>
+    </ul>
+    <ul style="list-style-type: square;"> 
+        <li>Diam di rumah</li>
+        <li>Buat tutorial HTML</li>
+        <li>Mengerjakan PR Sekolah</li>
+    </ul>
+    <ul style="list-style-type:disc;"> 
+        <li>Diam di rumah</li>
+        <li>Buat tutorial HTML</li>
+        <li>Mengerjakan PR Sekolah</li>
+    </ul>
+
+    <hr/>
+
+    <h1>List Bersarang / Nested List</h1>
+    <h2>Yang harus dilakukan hari ini:</h2>
+    <ol>
+        <li>
+            Diam di rumah
+            <ul>
+                <li>Santai</li>
+                <li>
+                    Belajar
+                    <ol type="a">
+                        <li>Website</li>
+                        <li>HTML</li>
+                    </ol>
+                </li>
+                <li>Cuci Tangan</li>
+            </ul>
+        </li>
+        <li>Buat tutorial HTML</li>
+        <li>Mengerjakan PR Sekolah</li>
+    </ol>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 3</title>
+</head>
+<body>
+    
+    <script>
+
+        // format deklarasi 1: 
+        // let namavariabel = /pola/flag;
+        let pola = /ab+c/;
+        
+        console.log(pola);
+        console.log(typeof pola);
+        
+        // format deklarasi 2: 
+        // let namavariabel = new RegExp("ab+c");
+        
+        let pola2 = new RegExp("ab+c");
+        console.log(pola2);
+        console.log(typeof pola2);
+
+
+        // =========
+
+        let kalimat = "Belajar JavaScript";
+        let pola3 = /JavaScript/;
+
+        console.log('==========================');
+        console.log(pola3.test(kalimat));       // true
+        console.log(/Belajar/.test(kalimat));   // true
+        console.log(/belajar/.test(kalimat));   // false karena b kecil tidak sama dengan B
+        console.log(/ajar/.test(kalimat));      // true 
+
+        let kalimat2 = "1 jam sama dengan 60 menit, juga sama dengan 3600 detik";
+        /* 
+        angka di kalimat ini berturut-turut dari kiri ke kanan: 
+        a. 1 
+        b. 60
+        c. 3600
+        */
+
+       // let pola4 = /\d+/;
+       let pola4 = /\d+/g;
+       
+       console.log(pola4.exec(kalimat2));
+       console.log(pola4.exec(kalimat2));
+       console.log(pola4.exec(kalimat2));
+       // console.log(pola4.exec(kalimat2));
+
+       
+    //    let pola5 = /[abcde]../;
+    // sama dengan
+        let pola5 = /[a-e]../;
+       
+       
+        console.log('==========================');
+        console.log(pola5.test('abaa'));    // true
+        console.log(pola5.test('fba'));     // false
+        console.log(pola5.test('9dd'));     // false
+        console.log(pola5.test('add'));     // true
+        console.log(pola5.test(' dd'));     // false 
+        console.log(pola5.test('belajar')); // true
+
+
+
+
+    </script>
+</body>
+</html>

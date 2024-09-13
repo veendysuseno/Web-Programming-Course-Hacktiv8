@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>For</h3>
+    <div id="hasil-for"></div>
+    <h3>While Do</h3>
+    <div id="hasil-while-do"></div>
+    <h3>Do While</h3>
+    <div id="hasil-do-while"></div>
+
+    <script>
+        let temporary_for = "";
+        let temporary_while_do = "";
+        let temporary_do_while = "";
+
+        // pengulangan dengan for
+        for (let i = 0; i < 10; i++) {
+            temporary_for = temporary_for + i + "<br/>";
+            console.log(temporary_for);
+        }
+
+        // pengulangan dengan while do
+        let j = 20;
+        while (j < 30) {
+            temporary_while_do = temporary_while_do + j + "<br/>";
+            j++;
+        }
+
+        // pengulangan dengan do while
+        let k = 10;
+        do{
+            temporary_do_while = temporary_do_while + k + "<br/>";
+            k--;
+        }
+        while (k > 0);
+
+        document.getElementById('hasil-for').innerHTML = temporary_for;
+        document.getElementById('hasil-while-do').innerHTML = temporary_while_do;
+        document.getElementById('hasil-do-while').innerHTML = temporary_do_while;
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 2 - Pertemuan 5</title>
+</head>
+<body>
+    
+    <h1>Penggunaan Variabel di JS</h1>
+
+    <div id="nama"></div>
+    <div id="lokasi"></div>
+    <div class="phi"></div>
+
+    <script>
+        /*
+            membuat / mendeklarasikan variabel; menggunakan kata kunci / keyword:
+            1. var      ==> old way 
+            2. let      ==> untuk data yang nilainya berubah-ubah / dinamis
+            3. const    ==> untuk data yang nilainya tetap / tidak berubah
+        */
+        var nama = "Workshop 4 Days";
+        let lokasi = "Online";
+        const phi = 3.14;
+
+        // var bisa deklarasi ulang / redeclare
+        var nama = "Update nama 2"; // ==> running
+
+        // re-assign nilai / pemberian nilai baru
+        lokasi = "Update lokasi";
+
+        // let tidak bisa redeclare
+        // let lokasi = "Update lokasi 2"; // ==> error
+
+                // redeclare const akan menimbulkan error
+        // const phi = 4;
+
+        // assign nilai baru ke const akan menimbulkan error
+        // phi = 5.14;
+
+        document.getElementById('nama').innerHTML = nama;
+        document.querySelector('#lokasi').innerHTML = lokasi;
+        document.querySelector('.phi').innerHTML = phi;
+
+
+    </script>
+</body>
+</html>

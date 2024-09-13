@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 4</title>
+
+    <style>
+        #hasil1 {
+            color: red;
+        }
+        #hasil2 {
+            color: green;
+        }
+        #hasil3 {
+            color: orange;
+        }
+        #hasil4 {
+            color: blue;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Program dengan setTimeout</h1>
+    <div id="hasil1"></div>
+    <div id="hasil2"></div>
+    <div id="hasil3"></div>
+
+    <div id="hasil4"></div>
+
+    <script>
+        // document.getElementById('hasil1');
+        let tampung1 = "";
+        let tampung2 = "";
+        let tampung3 = "";
+        let tampung4 = "";
+
+        /* 
+            setTimeout ==> eksekusi kode program setelah x detik
+
+            format:
+                setTimeout(function() {
+                    ...
+                }, x);
+                x = angka di dalam milisecond / milidetik
+                1 detik = 1000, 3 detik = 3000, dst
+
+        */
+
+        setTimeout(function () {
+
+            for (let i = 0; i < 10; i++) {
+                // tampung1 = tampung1 + "Halo dari settimeout ke-1..";
+                tampung1 += 'Halo dari settimeout ke-1 setelah 3 detik<br/>';
+            }
+
+            document.getElementById('hasil1').innerHTML = tampung1;
+
+        }, 3000);
+
+        setTimeout(() => {
+
+            for (let i = 0; i < 10; i++) {
+                tampung2 += 'Halo dari settimeout ke-2 setelah 5 detik<br/>';
+            }
+
+            document.getElementById('hasil2').innerHTML = tampung2;
+
+        }, 5000);
+
+        setTimeout(() => {
+
+            for (let i = 0; i < 10; i++) {
+                tampung3 += 'Halo dari settimeout ke-3 setelah 5 detik<br/>';
+            }
+
+            document.getElementById('hasil3').innerHTML = tampung3;
+
+        }, 7000);
+
+        setInterval(() => {
+            tampung4 = tampung4 + "Selamat datang dari setInterval<br/>";
+
+            document.getElementById('hasil4').innerHTML = tampung4;
+        }, 1000);
+
+    </script>
+
+</body>
+</html>

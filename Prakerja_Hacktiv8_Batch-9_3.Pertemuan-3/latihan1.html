@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 1 - Pertemuan 3</title>
+    <!-- internal css -->
+    <style>
+        /* 
+            selector {
+                properti1: value1;
+                properti2: value2;
+            }
+            selector ==> 
+                - namatag tanpa <> 
+                - id 
+                - class
+        */
+        
+        .artikel h1 {
+            color: red;
+            font-size: 20px;
+            background-color: blue;
+        }
+        h1 {
+            color: blue;
+        }
+        body {
+            background: #cbcbe9;
+            color: brown;
+        }
+        #kotak1 {
+            /* satuan: px / % / pt / em */
+            /* semua arahnya sama */
+            margin: 20px; /*atas = kanan = bawah = kiri = 20px*/
+            background-color: pink;
+            width: 30%;
+            min-height: 100px;
+            padding: 1em;
+        }
+        #kotak2 {
+            /* atas = bawah; kanan = kiri */
+            margin: 1em 3em; /* atas = bawah = 1em; kanan = kiri = 3em */
+            background-color: greenyellow;
+            width: 200px;
+            min-height: 180px;
+            padding: 3em 5em;
+        }
+        #kotak3 {
+            /* atas = bawah; kanan = kiri */
+            margin: 5pt 10pt 6pt 20pt; /* atas = 5pt; kanan=10pt; bawah=6pt; kiri=20pt; */
+            background-color: black;
+            color: white;
+            width: 5em;
+            min-height: 80px;
+            padding: 50px 20px 60px 90px;
+            border-radius: 5%; /*membuat  ujung */
+        }
+        #kotak4 {
+            /* atas = bawah; kanan = kiri */
+            /* margin: 5pt 10pt 6pt 20pt; */
+            /* not recommended */
+            margin-top: 50px;
+            margin-right: 30px;
+            margin-bottom: 44px;
+            margin-left: 80px;
+            background-color: blue;
+            color: white;
+            width: 10em;
+            min-height: 10em;
+            padding-top: 33px;
+            padding-right: 55px;
+            padding-bottom: 11px;
+            padding-left: 18px;
+        }
+        #kotak5 {
+            color: red;
+            background-color: yellow;
+            max-width: max-content;
+            padding: 1em;
+            border-radius: 50%;
+        }
+    </style>
+    <!-- memanggil external css -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="artikel">
+        <h1>Ini Judul</h1>
+    </div>
+
+    <h1>Ini Judul 2</h1>
+    <h1>Ini Judul 3</h1>
+
+    <p id="halo">Halo apa kabar?</p>
+
+    <div id="bacaan">
+        <!-- inline css, menggunakan atribute style -->
+        <p style="background-color: aqua; color: red; text-align: right;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quod dolor enim deserunt officia exercitationem quo. Porro nam amet error, corrupti similique voluptatibus officia reprehenderit dolorem, vel nostrum, atque odio!</p>
+    </div>
+
+    <h2>Ubah Warna Background dengan CSS</h2>
+
+    <hr/>
+
+    <div id="kotak1">
+        <p>Ini Kotak 1</p>
+    </div>
+    <div id="kotak2">
+        <p>Ini Kotak 2</p>
+    </div>
+    <div id="kotak3">
+        <p>Ini Kotak 3</p>
+    </div>
+    <div id="kotak4">
+        <p>Ini Kotak 4</p>
+    </div>
+    <div id="kotak5">
+        <p>Ini Kotak 5</p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Resume (CV)</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      /* Styling untuk membuat tiga kolom dengan lebar yang sama */
+      #skills .skill-container {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      /* Styling untuk masing-masing kolom */
+      .skill {
+        flex: 1;
+        margin-right: 20px; /* Jarak antar kolom */
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to My Resume</h1>
+    </header>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#experiences">Experiences</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#interests">Interests</a>
+      <a href="#award">Award</a>
+    </nav>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <div class="about-container">
+        <div class="profile-image">
+          <img src="images/profile.jpg" alt="Profile Picture" />
+        </div>
+        <div class="profile-info">
+          <h3>Veendy Fatchulhuda Suseno Putra</h3>
+          <p>
+            Passionate Innovator and Tech Enthusiast,Emerging Computer Systems
+            Specialist. Hello there! I'm an energetic and enthusiastic fresh
+            graduate with a burning passion for computer systems. I hold a
+            degree in Computer Science and Information Technology from the
+            prestigious Gunadarma of University.
+          </p>
+          <ul>
+            <li>Born: November 16, 1998</li>
+            <li>Location: Jakarta, Indonesia</li>
+            <li>Email: veendysuseno@gmail.com</li>
+            <li>Address: Jagakarsa, Jakarta Selatan</li>
+          </ul>
+          <!-- Link gambar kecil -->
+          <div class="social-links">
+            |
+            <a href="https://github.com/veendysuseno" target="_blank"
+              ><img src="images/github.png" alt="GitHub"
+            /></a>
+            |
+            <a href="https://www.linkedin.com/in/veendysuseno/" target="_blank"
+              ><img src="images/linkedin.png" alt="LinkedIn"
+            /></a>
+            |
+            <a href="https://www.instagram.com/veendysuseno/" target="_blank"
+              ><img src="images/instagram.png" alt="Instagram"
+            /></a>
+            |
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experiences">
+      <h2>Experiences</h2>
+      <div class="experience">
+        <h3>Head of Practice - Robotics Lab</h3>
+        <p class="experience-date">June 2019 - September 2022</p>
+        <p>
+          As the Head of Practice in the Robotics Lab at Gunadarma University, I
+          lead a team of talented students in conducting cutting-edge research
+          on system automation and the Internet of Things (IoT). We worked on
+          various exciting projects involving robotics and applied machine
+          learning to improve automation processes.
+        </p>
+      </div>
+      <div class="experience">
+        <h3>Research Assistant Leacturer</h3>
+        <p class="experience-date">September 2019 - May 2021</p>
+        <p>
+          During my time as a Research Assistant, I contributed to the
+          university's research team and took on administrative
+          responsibilities. I collaborated with professors and fellow
+          researchers on projects related to image processing and computer
+          vision. This experience further enhanced my skills in data analysis
+          and problem-solving.
+        </p>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <ul>
+        <li>
+          <strong>Bachelor of Computer Systems</strong><br />
+          Gunadarma University<br />
+          Jakarta, Indonesia
+        </li>
+        <br />
+        <li>
+          <strong>Natural Science</strong><br />
+          Public High School 2<br />
+          Pekalongan, Indonesia
+        </li>
+        <!-- Tambahkan entri lainnya sesuai dengan informasi pendidikan Anda -->
+      </ul>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skill-container">
+        <div class="skill">
+          <h3>Programming Languages</h3>
+          <ul>
+            <li>Python</li>
+            <li>C</li>
+            <li>Java</li>
+            <li>JavaScript</li>
+            <li>HTML</li>
+            <li>CSS</li>
+          </ul>
+        </div>
+        <div class="skill">
+          <h3>Technologies</h3>
+          <ul>
+            <li>Linux</li>
+            <li>SQL</li>
+            <li>Virtual Environment</li>
+            <li>Heroku</li>
+            <li>Machine Learning</li>
+            <li>Image Processing</li>
+            <li>Computer Vision</li>
+            <li>Django</li>
+            <li>TensorFlow</li>
+          </ul>
+        </div>
+        <div class="skill">
+          <h3>Microcontrollers</h3>
+          <ul>
+            <li>Arduino</li>
+            <li>Raspberry Pi</li>
+            <li>ESP8266</li>
+            <li>ESP32</li>
+            <li>STM32</li>
+          </ul>
+        </div>
+        <div class="skill">
+          <h3>Softskill</h3>
+          <ul>
+            <li>TeamWork</li>
+            <li>Problem Solving</li>
+            <li>Leadership</li>
+            <li>Public Speaking</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="interests">
+      <h2>Interests</h2>
+      <p>
+        My interests go beyond the realm of computer systems. I find joy in
+        exploring various fields and hobbies. Some of my interests include:
+      </p>
+      <ul>
+        <li>Photography: Capturing moments and scenes that inspire me.</li>
+        <li>Reading: Exploring diverse topics and genres in books.</li>
+        <li>
+          Music: Listening to different genres to unwind and find inspiration.
+        </li>
+        <li>Cooking: Trying out new recipes and creating delicious dishes.</li>
+      </ul>
+    </section>
+
+    <section id="award">
+      <h2>Award</h2>
+      <p>
+        I am proud to have received recognition for my achievements and hard
+        work. For more details about my awards and accomplishments, please visit
+        my LinkedIn profile:
+        <a href="https://www.linkedin.com/in/veendysuseno/" target="_blank"
+          >LinkedIn Profile</a
+        >
+      </p>
+    </section>
+
+    <!-- Add the "Back to Top" button -->
+    <button id="back-to-top" class="fade-in" title="Back to Top">
+      <i class="fa fa-arrow-up"></i>
+    </button>
+
+    <footer>
+      <p>&copy; Copyright 2023 @veendysuseno. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

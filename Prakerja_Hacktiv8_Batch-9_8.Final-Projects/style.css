@@ -1,0 +1,257 @@
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    color: #333; /* Ubah warna teks menjadi hitam (#333) */
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+header h1 span {
+    display: inline-block;
+    animation: bounce 1s infinite;
+}
+
+/* Animasi bounce pada header h1 span */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Mengatur tampilan navbar */
+nav {
+    background-color: #444;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+nav a.active {
+    background-color: #666;
+}
+
+/* Membuat navigasi interaktif dengan smooth scroll */
+document.addEventListener("DOMContentLoaded", function() {
+    const navLinks = document.querySelectorAll("nav a");
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", (event) => {
+            event.preventDefault();
+            const target = document.querySelector(link.getAttribute("href"));
+            const headerOffset = 60; // Jarak dari bagian atas jendela ke bagian atas elemen tujuan
+            const elementPosition = target.getBoundingClientRect().top;
+            const offsetPosition = elementPosition - headerOffset;
+            
+            window.scrollBy({
+                top: offsetPosition,
+                behavior: "smooth"
+            });
+
+            //Tambahkan kelas "active" ke tautan yang aktif dan hapus dari tautan lainnya
+            navLinks.forEach(navLink => {
+                navLink.classList.remove("active");
+            });
+            link.classList.add("active");
+        });
+    });
+});
+
+/* style.css */
+
+/* ... (CSS sebelumnya) ... */
+
+section#about {
+    padding: 20px;
+    margin: 10px;
+    background-color: #333; /* Ubah warna latar belakang menjadi warna header */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  section#about h2 {
+    text-align: center;
+    margin-top: 0;
+    font-weight: bold;
+    color: #333; /* Ubah warna teks menjadi putih */
+    text-transform: uppercase;
+}
+  
+.about-container {
+    display: flex;
+    flex-wrap: wrap; /* Baris baru jika lebar container tidak mencukupi */
+    align-items: center;
+    justify-content: space-around;
+}
+  
+.profile-image{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid #333;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;/* Gambar diatur sesuai proporsi, memastikan semua bagian foto terlihat */
+}
+  
+.profile-info {
+    flex: 1;
+    padding: 20px;
+}
+  
+  .profile-info h3 {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .profile-info p {
+    color: #777;
+    margin-bottom: 15px;
+  }
+  
+  .profile-info ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .profile-info li {
+    margin-bottom: 5px;
+  }
+  
+  /* Tambahkan gaya interaktif untuk foto profile */
+  .profile-image img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+  }
+  
+
+main {
+    padding: 20px;
+}
+
+section {
+    padding: 20px;
+    margin: 10px;
+    background-color: #f8f8f8;   /* Warna latar belakang setiap section */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Mengubah h2 menjadi posisi tengah */
+section h2 {
+    color: #333;   /* Warna judul setiap section */
+    text-align: center;
+    margin-top: 0;
+    font-weight: bold; /* Membuat tulisan tebal */
+}
+
+  /* Warna teks pada bagian Experience Date */
+  .experience-date {
+    color: #777;
+  }
+
+section p {
+    line-height: 1.6;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Add the "Back to Top" button style */
+#back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#back-to-top.visible {
+    display: block;
+}
+
+section#experiences {
+    padding: 20px;
+    margin: 10px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  section#experiences h2 {
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+  }
+  
+  .experience {
+    margin-bottom: 20px;
+  }
+  
+  .experience h3 {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .experience-date {
+    color: #777;
+    margin-top: -10px;
+    margin-bottom: 15px;
+  }

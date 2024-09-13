@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 3 - Pertemuan 3</title>
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        #header {
+            background-color: red;
+            color: white;
+            font-size: 3em;
+            padding: .5em;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            z-index: 1;
+        }
+
+        #sidebar {
+            background: yellow;
+            color: red;
+            flex: 1;
+            min-height: 100vh;
+        }
+
+        #sidebar2 {
+            flex: 1;
+            background: pink;
+        }
+        
+        #content {
+            background: greenyellow;
+            color: black;
+            flex: 5;
+        }
+
+        #footer {
+            background: blue;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .wrapper {
+            display: flex;
+            position: relative;
+            top: 6.5em;
+        }
+
+        #kotak1, #kotak2 {
+            width: 20%;
+            margin: 1em;
+            padding: 1em;
+            color: white;
+        }
+
+        #kotak1 {
+            background-color: blue;
+            /* top: 20em; */
+            position: absolute;
+        }
+        #kotak2 {
+            z-index: 2;
+            background-color: orange;
+            position: absolute;
+            /* right: 5em; */
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <div id="header">
+        <b>PT ABCDEF</b>
+    </div>
+
+    <div class="wrapper">
+        <div id="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="#">Menu 1</a></li>
+                    <li><a href="#">Menu 2</a></li>
+                    <li><a href="#">Menu 3</a></li>
+                    <li><a href="#">Menu 4</a></li>
+                </ul>
+            </nav>
+        </div>
+    
+        <div id="content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est aut praesentium excepturi delectus qui molestias quaerat, rerum vel mollitia assumenda asperiores corporis aliquam fugiat tempora, corrupti obcaecati animi pariatur optio?</p>
+
+            <input type="text" placeholder="Masukkan Nama Anda" />
+
+            <div id="kotak1">Kotak 1</div>
+            <div id="kotak2">Kotak 2</div>
+            <div id="kotak3">Kotak 3</div>
+
+        </div>
+
+        <div id="sidebar2">
+            Ini Sidebar 2
+        </div>
+    </div>
+
+    <div id="footer">
+        &copy; Copyright 2023 PT ABCDEF. All Rights Reserved.
+    </div>
+</body>
+</html>

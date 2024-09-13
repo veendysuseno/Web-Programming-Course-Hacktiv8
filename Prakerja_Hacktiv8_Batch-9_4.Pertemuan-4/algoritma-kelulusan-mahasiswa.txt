@@ -1,0 +1,22 @@
+Algoritma Kelulusan Mahasiswa (Naratif):
+
+1. Baca nama 
+2. Baca nilai 
+3. Jika nilai >= 60, maka keterangan = "lulus"
+4. Jika nilai < 60, maka keterangan = "tidak lulus" 
+5. Tampilkan nilai keterangan ("lulus" atau "tidak lulus")
+
+Algoritma Kelulusan Mahasiswa (Pseudo-Code / Kode Semu):
+// input 
+nama <-- "Rizki Cahyana"
+nilai <-- 92
+keterangan <-- ""
+
+// proses 
+jika nilai >= 60 
+    keterangan = "lulus" 
+selain itu 
+    keterangan = "tidak lulus"
+
+// output 
+cetak "Keterangan = " + keterangan

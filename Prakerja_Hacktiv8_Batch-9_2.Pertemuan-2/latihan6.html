@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 6 - Pertemuan 2</title>
+</head>
+<body>
+    <h1>Membuat Tabel</h1>
+
+    <!-- 
+        sintaks: 
+        <table>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+
+        tr ==> membuat baris ==> ke bawah
+        td ==> membuat kolom ==> ke samping
+
+        rowspan ==> gabung baris 
+        colspan ==> gabung kolom
+
+     -->
+
+    <table border="1" cellspacing="0" cellpadding="3">
+        <!-- baris pertama -->
+        <tr>
+            <!-- kolom pertama -->
+            <th rowspan="2">No.</th>
+            <!-- kolom kedua -->
+            <!-- <td><b><center>Nama</center></b></td> -->
+            <!-- <td align="center"><b>Nama</b></td> -->
+            <th colspan="2">Namaaaaa</th>
+            <!-- kolom ketiga -->
+            <th rowspan="2">Alamat</th>
+        </tr>
+        <!-- baris kedua -->
+        <tr>
+            <th>Depan</th>
+            <th>Belakang</th>
+        </tr>
+        <!-- baris ketiga -->
+        <tr>
+            <td>1.</td>
+            <td>Beckham</td>
+            <td>Putra</td>
+            <td>Bandung</td>
+        </tr>
+        <tr>
+            <td>2.</td>
+            <td>Ramadhan</td>
+            <td>Sananta</td>
+            <td>Makassar</td>
+        </tr>
+        <tr>
+            <td>3.</td>
+            <td>Muhammad</td>
+            <td>Ferrari</td>
+            <td>Jakarta</td>
+        </tr>
+
+    </table>
+
+</body>
+</html>
